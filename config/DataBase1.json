@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Aman Rawat",
+    "email": "amnrwt4@gmail.com",
+    "country": "India",
+    "zipcode": "246149",
+    "password": "1234"
+  },
+  {
+    "name": "Amit",
+    "email": "amit4@gmail.com",
+    "country": "India",
+    "zipcode": "246149",
+    "password": "1234"
+  },
+  {
+    "name": "Anuj",
+    "email": "anuj4@gmail.com",
+    "country": "India",
+    "zipcode": "246149",
+    "password": "5678"
+  },
+  {
+    "name": "Ayush",
+    "email": "ayush4@gmail.com",
+    "country": "India",
+    "zipcode": "246149",
+    "password": "5678"
+  },
+  {
+    "name": "Amit Gusain",
+    "email": "amit12@gmail.com",
+    "password": "1234",
+    "address": "Near IHMS collage",
+    "landmark": "Near IHMS Collage",
+    "pincode": "246149"
+  },
+  {
+    "name": "appolo",
+    "email": "amy4@gmail.com",
+    "password": "1234",
+    "address": "Jhandichour",
+    "landmark": "Near IHMS Collage",
+    "pincode": "246149"
+  },
+  {
+    "name": "lipms alian",
+    "email": "limps@gmail.com",
+    "password": "1234",
+    "address": "Jhandichour",
+    "landmark": "Near IHMS Collage",
+    "pincode": "246149"
+  }
+]
