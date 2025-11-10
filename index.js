@@ -11,8 +11,8 @@ const cors = require('cors');
 app.use(
   cors({
     origin: [
+      process.env.FRONTEND_URl,
       'http://localhost:5173',
-      process.env.FRONTEND_URl
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
