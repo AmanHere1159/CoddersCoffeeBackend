@@ -8,11 +8,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 const cors = require('cors');
-app.use(cors({
-  origin: ['http://localhost:5173','codders-coffee-backend.vercel.app'],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+app.use(
+  cors({
+    origin: [
+      'http://localhost:5173',
+      process.env.FRONTEND_URl
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  })
+);
+
 
 const PORT = process.env.PORT;
 const HOST_NAME = process.env.HOST_NAME || "localhost";
