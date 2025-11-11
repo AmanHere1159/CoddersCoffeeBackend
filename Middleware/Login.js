@@ -1,12 +1,14 @@
 const { readUserFileSync } = require("../Controller/asyncfunction");
+const Signup = require("../Model/signupModel");
 
 
-exports.LoginModule= (req,res,next)=>{
+exports.LoginModule=async (req,res,next)=>{
     const body = req.body;
     const { email,  password} = body;
 
     console.log("body recivied", body);
-    let data = readUserFileSync();
+    // let data = readUserFileSync();
+    let data = await Signup.find({});
     const forEmail = data.find(user => user.email === email)
     console.log("User Found",forEmail)
       if (!forEmail) {
