@@ -5,14 +5,14 @@ exports.SignupModule= async (req, res, next) => {
     const body = req.body;
     const { name, email, country, zipcode, password} = body;
     console.log("body recivied", body);
-    let data = readUserFileSync();
-   
+    // let data = readUserFileSync();
+   let data = await Signup.find({});
     const exists = data.find(user => user.email === email)
 
 
     if(exists){
       return res.status(201).json({
-        message: "You have alredy registered please go back and SignUp please",
+        message: "You have alredy registered please go back and Login please",
         data: email,
       });
     }
