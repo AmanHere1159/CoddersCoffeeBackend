@@ -16,7 +16,8 @@ exports.SignupModule= async (req, res, next) => {
         data: email,
       });
     }
-   writeUserFileSync(body);
+    const details = await Signup.create(exists);
+  //  writeUserFileSync(body);
    console.log("User added successfully")
      return res.status(200).json({
       message: "User added successfully",
