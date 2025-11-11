@@ -3,7 +3,8 @@ const Signup = require("../Model/signupModel");
 exports.SignupModule= async (req, res, next) => {
  try {
     const body = req.body;
-    const { name, email, country, zipcode, password} = body;
+    const { name, email, address, password, landmark ,pincode} = body;
+    const dataToSave = { name, email, address, pincode, password, landmark };
     console.log("body recivied", body);
     // let data = readUserFileSync();
    let data = await Signup.find({});
@@ -16,12 +17,12 @@ exports.SignupModule= async (req, res, next) => {
         data: email,
       });
     }
-    const details = await Signup.create(exists);
+    const details = await Signup.create(dataToSave);
   //  writeUserFileSync(body);
    console.log("User added successfully")
      return res.status(200).json({
       message: "User added successfully",
-      data: body,
+      data: details,
     });
   } 
   catch (error) {
